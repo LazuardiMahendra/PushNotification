@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -50,4 +51,7 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(libs.google.firebase.messaging)
     implementation(libs.firebase.analytics)
+
+    implementation(libs.firebase.crashlytics)
+    implementation(kotlin("script-runtime"))
 }
